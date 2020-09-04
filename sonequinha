@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+		
+int main () 
+{
+	mascara pros olhos;
+	almofada;
+	cama;
+	deitar na cama;
+	colocar a mascara nos olhos; 
+	agarrar a almofada;
+
+return 0;
+}
+

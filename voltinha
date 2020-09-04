@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+		
+int main () 
+{
+	
+
+	carro fusquinha;
+	motor quente;
+	pedal quadrado;
+
+	pegar o carro;
+	aquecer o motor; 
+	botar o pe no pedal quadrado;
+
+return 0;
+
+
+}
+
+
+
+----- OU PODE SER TAMBEM -----
+
+#include <stdio.h>
+
+int main(){ carro fusquinha; motor quente; pedal quadrado; pegar o carro; aquecer o motor; botar o pe no pedal quadrado; return 0; }
+
+
+----- CUIDADO COM COMENTARIOS DE LINHA -----
