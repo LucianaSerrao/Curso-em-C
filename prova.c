@@ -46,17 +46,25 @@
         soma = (nota1 + nota2 + nota3);
         media = (soma/numeroProvas);
 
-        printf("A média das notas foi de %f\n\n", media);
-        printf("Se foi acima de 7 TUDO, se não foi FIQUE COM DEUS!\n");       
+        if(media >= 7.0) {
+            printf("\nVocê foi aprovadx!!!\n");
+        } else {
+            if(media >= 5.0){
+                printf("Você está na final, repare.\n");
+            }
+            else{
+                printf("Você foi reprovadx direto :( ");
+            }            
+        }   
 
 
-    return 0; /* 
-
- 
+    return 0; 
+    
+    /*  
 
 			gcc prova.c -o prova
 
 			./prova
 
-	No primeiro comando o gcc indica que você está compilando o arquivo prova.c e o comando -o é usado para criar um arquivo executável, 		chamado prova. Em seguida você irá executar este arquivo criado através do comando ./prova 
-*/
+	    No primeiro comando o gcc indica que você está compilando o arquivo prova.c e o comando -o é usado para criar um arquivo executável, 		chamado prova. Em seguida você irá executar este arquivo criado através do comando ./prova 
+    */
