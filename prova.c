@@ -31,7 +31,8 @@
      
         float nota1, nota2, nota3;
         float soma, media;
-        float numeroProvas = 3;
+        int numeroProvas = 3;
+        int numeroFaltas;
 
         printf("--- CÁLCULO DA MÉDIA ---\n\n");
         printf("Digite a nota da 1ª prova: ");   
@@ -43,17 +44,20 @@
         printf("Digite a nota da 3ª prova: ");
         scanf("%f", &nota3);
 
+        printf("Digite o número de faltas: ");
+        scanf("%d", &numeroFaltas);
+
         soma = (nota1 + nota2 + nota3);
         media = (soma/numeroProvas);
 
-        if(media >= 7.0) {
+        if((media >= 7.0) && (numeroFaltas < 12)) {
             printf("\nVocê foi aprovadx!!!\n");
         } else {
-            if(media >= 5.0){
-                printf("Você está na final, repare.\n");
-            }
-            else{
+            if((media < 5.0) || (numeroFaltas >= 12)){
                 printf("Você foi reprovadx direto :( ");
+            }
+            else{                
+                printf("Você está na final, repare.\n");
             }            
         }   
 

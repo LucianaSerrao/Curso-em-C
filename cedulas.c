@@ -27,31 +27,31 @@ int main () {
 
     printf("SERAO %d CEDULAS DE R$ 50,00 \n", cedulas_de_cinquenta);
 
-    total = (total-cedulas_de_cinquenta);
+    total -= cedulas_de_cinquenta;
 
     cedulas_de_vinte = (total/20);
 
     printf("SERAO %d CEDULAS DE R$ 20,00 \n", cedulas_de_vinte);
 
-    total = (total-cedulas_de_vinte);
+    total -= cedulas_de_vinte;
 
     cedulas_de_dez = (total/10);
 
     printf("SERAO %d CEDULAS DE R$ 10,00 \n", cedulas_de_dez);
 
-    total = (total-cedulas_de_dez);
+    total -= cedulas_de_dez;
 
     cedulas_de_cinco = (total/5);
 
     printf("SERAO %d CEDULAS DE R$ 5,00 \n", cedulas_de_cinco);
 
-    total = (total-cedulas_de_cinco);
+    total -= cedulas_de_cinco;
 
     cedulas_de_dois = (total/2);
 
     printf("SERAO %d CEDULAS DE R$ 2,00 \n", cedulas_de_dois);
 
-    total = (total-cedulas_de_dois);
+    total -= cedulas_de_dois;
 
     cedulas_de_um = (total/1);
 
