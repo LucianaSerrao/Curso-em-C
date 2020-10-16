@@ -28,33 +28,99 @@
 
  int main(){
 
-     
-        float nota1, nota2, nota3;
-        float soma, media;
         int numeroProvas = 3;
-        int numeroFaltas;
         int numeroAlunxs = 3 ;
+
+        float alunx_1[3];
+        float alunx_2[3];
+        float alunx_3[3];
+
+        float soma[3]; 
+        float media[3];
+        int numeroFaltas[3];
+
         int i; //variavel auxiliar
 
-        printf("--- CÁLCULO DA MÉDIA ---\n\n");
+        printf("--- INSERÇÃO DAS NOTAS ---\n\n");
 
-        for(i=1; i<=numeroAlunxs; i++){
-            printf("Digite a nota da 1ª prova do %dº alunx: ", i);   
-            scanf("%f", &nota1);
+        //for(i=1; i<=numeroProvas; i++){
+            printf("--- NOTAS DO ALUNX 1 ---\n\n");
+            printf("Digite a nota da 1ª prova do 1º alunx: ");   
+            scanf("%f", &alunx_1[0]);
 
-            printf("Digite a nota da 2ª prova do %dº alunx: ", i);
-            scanf("%f", &nota2);
+            printf("Digite a nota da 2ª prova do 1º alunx: ");
+            scanf("%f", &alunx_1[1]);
 
-            printf("Digite a nota da 3ª prova do %dº alunx: ", i);
-            scanf("%f", &nota3);
+            printf("Digite a nota da 3ª prova do 1º alunx: ");
+            scanf("%f", &alunx_1[2]);
 
-            printf("Digite o número de faltas: ");
-            scanf("%d", &numeroFaltas);
+            printf("Digite o número de faltas do 1º alunx: ");
+            scanf("%d", &numeroFaltas[0]);
 
-            soma = (nota1 + nota2 + nota3);
-            media = (soma/numeroProvas);
+            soma[0] = (alunx_1[0] + alunx_1[1] + alunx_1[2]);
+            media[0] = (soma[0]/numeroProvas);
 
-            if((media >= 7.0) && (numeroFaltas < 12)) {
+            if((media[0] >= 7.0) && (numeroFaltas[0] < 12)) {
+                printf("\nVocê foi aprovadx!!!\n");
+            } else {
+                if((media[0] < 5.0) || (numeroFaltas[0] >= 12)){
+                    printf("Você foi reprovadx direto :( \n");
+                }
+                else{                
+                    printf("Você está na final, repare.\n");
+                }            
+            }   
+
+       // }
+
+        //for(i=1; i<=numeroProvas; i++){
+            printf("--- NOTAS DO ALUNX 2 ---\n\n");
+            printf("Digite a nota da 1ª prova do 2º alunx: ");   
+            scanf("%f", &alunx_2[0]);
+
+            printf("Digite a nota da 2ª prova do 2º alunx: ");
+            scanf("%f", &alunx_2[1]);
+
+            printf("Digite a nota da 3ª prova do 2º alunx: ");
+            scanf("%f", &alunx_2[2]);
+
+            printf("Digite o número de faltas do 2º alunx: ");
+            scanf("%d", &numeroFaltas[1]);
+
+            soma[1] = (alunx_2[0] + alunx_2[1] + alunx_2[2]);
+            media[1] = (soma[1]/numeroProvas);
+
+            if((media[1] >= 7.0) && (numeroFaltas[1] < 12)) {
+                printf("\nVocê foi aprovadx!!!\n");
+            } else {
+                if((media[1] < 5.0) || (numeroFaltas[1] >= 12)){
+                    printf("Você foi reprovadx direto :( \n");
+                }
+                else{                
+                    printf("Você está na final, repare.\n");
+                }            
+            }   
+
+      //  }
+
+       // for(i=1; i<=numeroProvas; i++){
+            printf("--- NOTAS DO ALUNX 1 ---\n\n");
+            printf("Digite a nota da 1ª prova do 3º alunx: ");   
+            scanf("%f", &alunx_3[0]);
+
+            printf("Digite a nota da 2ª prova do 3º alunx: ");
+            scanf("%f", &alunx_3[1]);
+
+            printf("Digite a nota da 3ª prova do 3º alunx: ");
+            scanf("%f", &alunx_3[2]);
+
+            printf("Digite o número de faltas do 3º alunx: ");
+            scanf("%d", &numeroFaltas[2]);
+
+            soma[2] = (alunx_3[0] + alunx_3[1] + alunx_3[2]);
+            media[2] = (soma[2]/numeroProvas);
+
+            if((media[2] >= 7.0) && (numeroFaltas[2] < 12)) {
                 printf("\nVocê foi aprovadx!!!\n");
             } else {
                 if((media < 5.0) || (numeroFaltas >= 12)){
@@ -65,7 +131,7 @@
                 }            
             }   
 
-        }
+      //  }
 
     return 0; 
  }   
