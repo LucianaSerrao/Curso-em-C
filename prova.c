@@ -20,44 +20,42 @@
 
  int main(){
 
-     
-        float nota1, nota2, nota3;        
         int numeroProvas = 3;        
-        int numeroAlunxs = 3 ;
-        int i; //variavel auxiliar
+        int numeroAlunxs = 3;
 
-        float soma[3], media[3];
+        //matriz =  linhas: alunx  colunas: notas
+        int notas_alunxs[numeroAlunxs][numeroProvas];
+        
+        int notas, alunxs; //variaveis auxiliares do 'for'
+
+        float soma[3] = 0;
+        float media[3];
         int numeroFaltas[3];
 
         printf("--- CÁLCULO DA MÉDIA ---\n\n");
 
-        for(i=0; i<(numeroAlunxs); i++){
-            printf("Digite a nota da 1ª prova do %dº alunx: ", i+1);   
-            scanf("%f", &nota1);
+        for(alunxs=0; alunxs<(numeroAlunxs); alunxs++){
+            for(notas=0; notas<numeroProvas; notas++){
+                printf("Digite a nota da %dª prova do %dº alunx: ", notas+1, alunxs+1);   
+                scanf("%f", &notas_alunxs[alunxs][notas]);
+                soma[alunxs] = soma[alunxs] + notas_alunxs[alunxs][notas];
+            }
 
-            printf("Digite a nota da 2ª prova do %dº alunx: ", i+1);
-            scanf("%f", &nota2);
+            printf("Digite o número de faltas do %dº alunx: ", alunxs+1);
+            scanf("%d", &numeroFaltas[alunxs]);
 
-            printf("Digite a nota da 3ª prova do %dº alunx: ", i+1);
-            scanf("%f", &nota3);
-            
-            printf("Digite o número de faltas do %dº alunx: ", i+1);
-            scanf("%d", &numeroFaltas[i]);
+            media[alunxs] = soma[alunxs]/numeroProvas;
 
-            soma[i] = (nota1 + nota2 + nota3);
-            media[i] = (soma[i]/numeroProvas);
-
-            if((media[i] >= 7.0) && (numeroFaltas[i] < 12)) {
+            if((media[alunxs] >= 7.0) && (numeroFaltas[alunxs] < 12)) {
                 printf("\nVocê foi aprovadx!!!\n");
             } else {
-                if((media[i] < 5.0) || (numeroFaltas[i] >= 12)){
+                if((media[alunxs] < 5.0) || (numeroFaltas[alunxs] >= 12)){
                     printf("Você foi reprovadx direto :( \n");
                 }
                 else{                
                     printf("Você está na final, repare.\n");
                 }            
             }   
-
         }
 
     return 0; 
