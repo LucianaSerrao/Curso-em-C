@@ -13,6 +13,7 @@
 
  #include <stdio.h>
  #include <stdlib.h>
+ #include <string.h>
 
  // a função printf() é utilizada para escrita na tela
 
@@ -32,7 +33,14 @@
         float media[3];
         int numeroFaltas[3];
 
+        char alunx1[10];
+        char alunx2[10];
+        char alunx3[10];
+
         printf("--- CÁLCULO DA MÉDIA ---\n\n");
+
+        printf("Digite os nomes dos 3 estudantes:\n");
+        scanf("%s %s %s", alunx1, alunx2, alunx3);
 
         for(alunxs=0; alunxs<(numeroAlunxs); alunxs++){
             for(notas=0; notas<numeroProvas; notas++){
@@ -47,13 +55,37 @@
             media[alunxs] = soma[alunxs]/numeroProvas;
 
             if((media[alunxs] >= 7.0) && (numeroFaltas[alunxs] < 12)) {
-                printf("\nVocê foi aprovadx!!!\n");
+                if(alunxs == 0){
+                    printf("%s : APROVADX!\n", alunx1);
+                }
+                if(alunxs == 1){
+                    printf("%s : APROVADX!\n", alunx2);
+                }
+                if(alunxs == 2){
+                    printf("%s : APROVADX!\n", alunx3);
+                }
             } else {
                 if((media[alunxs] < 5.0) || (numeroFaltas[alunxs] >= 12)){
-                    printf("Você foi reprovadx direto :( \n");
+                   if(alunxs == 0){
+                        printf("%s : REPROVADO DIRETO!\n", alunx1);
+                    }
+                    if(alunxs == 1){
+                        printf("%s : REPROVADO DIRETO!\n", alunx2);
+                    }
+                    if(alunxs == 2){
+                        printf("%s : REPROVADO DIRETO!\n", alunx3);
+                    }
                 }
                 else{                
-                    printf("Você está na final, repare.\n");
+                    if(alunxs == 0){
+                        printf("%s : VAI FAZER FINAL!\n", alunx1);
+                    }
+                    if(alunxs == 1){
+                        printf("%s : VAI FAZER FINAL!\n", alunx2);
+                    }
+                    if(alunxs == 2){
+                        printf("%s : VAI FAZER FINAL!\n", alunx3);
+                    }
                 }            
             }   
         }
